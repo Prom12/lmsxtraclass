@@ -7,11 +7,6 @@
     
 	@include('frontpage/layouts/header')
 
-	
-
-
-
-
     @section('content')
 
     @show

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //FrontPage Views
 Route::group(['namespace' => 'FrontPage'], function(){
-	
+
 	Route::get('/','HomeController@home')->name('home');
 
 	Route::get('/Ourtutors',function(){return view('frontpage/layouts/ourtutors');});
@@ -37,7 +37,7 @@ Route::middleware('auth')->namespace('users')->prefix('Users')->name('users.')->
 	Route::resource('home','HomeController');
 	//categories
  	Route::resource('categories','CategoriesController');
- 	//mycourses
+ 	//my courses
  	Route::resource('my_courses','MyCoursesController');
  	//courses
  	Route::resource('courses','CoursesController');
@@ -51,7 +51,7 @@ Route::middleware('auth')->namespace('users')->prefix('Users')->name('users.')->
  	Route::resource('settings', 'SettingsController');
  	//users
  	Route::resource('users', 'UsersController');
- 	
+
 });
 
 Auth::routes();

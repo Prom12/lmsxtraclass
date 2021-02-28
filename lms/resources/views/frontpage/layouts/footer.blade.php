@@ -1,16 +1,16 @@
 
     <!-- footer section -->
-    <footer class="footer-section" style="background-color:green;">
+    <footer class="footer-section">
             <div class="footer-warp">
                 <div class="row">
-                        <ul class="ml-3">
-                            <li>Our Tutors</li>
-                            <li>Become a Tutor</li>
-                            <li>Help</li>
-                            <li>FAQs</li>
-                            <li>Pricing</li>
-                            <li>How It works</li>
-                            <li>Contact Us</li>
+                        <ul class="ml-3" style="color: green;">
+                            <li><b>Our Tutors</b></li>
+                            <li><b>Become a Tutor</b></li>
+                            <li><b>Help</b></li>
+                            <li><b>FAQs</b></li>
+                            <li><b>Pricing</b></li>
+                            <li><b>How It works</b></li>
+                            <li><b>Contact Us</b></li>
                         </ul>
                     
                 </div>

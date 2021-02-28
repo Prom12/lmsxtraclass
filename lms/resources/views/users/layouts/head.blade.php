@@ -19,22 +19,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('Admin-l/plugins/summernote/summernote-bs4.css')}}">
 
-  <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-  <link rel="stylesheet" href="{{asset('frontpage/css/owl.carousel.css')}}">
-  
 
   <link rel="stylesheet" href="{{asset('Admin-l/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('Admin-l/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 
-
-
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{asset('frontpage/css/bootstrap.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontpage/css/font-awesome.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontpage/css/owl.carousel.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontpage/css/style.css')}}"/>
-
-
-  <!--[if lt IE 9]>
