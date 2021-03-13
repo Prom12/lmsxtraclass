@@ -130,12 +130,40 @@ body {
   font-size: 14px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   white-space: nowrap;
 }
+
+a:focus, .button:focus, button:focus, .btn:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+a:active{
+  background-color: green;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 25px;
+}
+
 
 a:hover {
   outline: none;
@@ -166,6 +194,36 @@ p {
   }
 
 
+
+/* Float four columns side by side */
+.columnc {
+  float: left;
+  width: 170px;
+  padding: 0 10px;
+
+}
+
+/* Clear floats after the columns */
+.rowc:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.cardc {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 30px;
+  text-align: center;
+  background-color: green;
+  height: 100px;
+}
+
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+}
 
   /*---------------------------------------
      MENU             
@@ -200,7 +258,7 @@ p {
 
   .nav-item .nav-link.active,
   .nav-item .nav-link:hover {
-    color: var(--primary-color);
+    color: var();
   }
 
   .navbar-toggler {
@@ -268,11 +326,9 @@ p {
     top: 8px;
   }
 
-
-
-  /*---------------------------------------
-     FOOTER              
-  -----------------------------------------*/
+/*------------------
+  Footer section
+---------------------*/
 
   .site-footer {
     border-top: 1px solid #efebeb;
@@ -288,12 +344,34 @@ p {
     font-size: var(--base-font-size);
   }
 
-  .contact .fa,
-  .site-footer .fa {
-    color: var(--primary-color);
-  }
+.footer-section {
+  border-top: 3px solid #d82a4e;
+  background-color: rgba(200,255,200,0.7);
+}
+
+.footer-warp {
+  max-width: 1559px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
 
+
+.footer-bottom {
+  overflow: hidden;
+  background: #edf4f6;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+
+.copyright {
+  padding-top: 3px;
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #474747;
+}
 
 
   /*---------------------------------------
@@ -308,10 +386,6 @@ p {
 
     .nav-item .nav-link {
       padding: 6px;
-    }
-
-    .navbar .social-icon {
-      margin-top: 22px;
     }
 
     .navbar-collapse,
@@ -344,69 +418,17 @@ p {
   }
 }
 
-h3 {
-  font-size: 24px;
-  line-height: 25px;
-}
 
 @media (max-width: 576px) {
   h3 {
     font-size: 20px;
   }
 }
-
-h5 {
-  font-size: 18px;
-  line-height: 22px;
-}
-
-
-
-a:focus, .button:focus, button:focus, .btn:focus {
-  text-decoration: none;
-  outline: none;
-  box-shadow: none;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/*------------------
-  Footer section
----------------------*/
-
-.footer-section {
-	border-top: 3px solid #d82a4e;
-}
-
-.footer-warp {
-	max-width: 1559px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
-
-
-
-.footer-bottom {
-	overflow: hidden;
-	background: #edf4f6;
-	padding: 20px 0;
-	margin-top: 50px;
-}
-
-
-.copyright {
-	padding-top: 3px;
-	float: left;
-	font-size: 14px;
-	font-weight: 600;
-	color: #474747;
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .columnc {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

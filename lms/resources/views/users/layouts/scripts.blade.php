@@ -23,8 +23,3 @@
   });
   </script>
 
-
-  <script src="{{asset('frontpage/js/mixitup.min.js')}}"></script>
-    <script src="{{asset('frontpage/js/circle-progress.min.js')}}"></script>
-    <script src="{{asset('frontpage/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('frontpage/js/main.js')}}"></script>
