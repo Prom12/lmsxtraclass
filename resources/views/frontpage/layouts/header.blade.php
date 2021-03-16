@@ -3,7 +3,7 @@
         <div class="loader"></div>
     </div>
 
- 
+
 <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg" style="background-color:gray;">
         <div class="container">
@@ -16,15 +16,15 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-lg-auto " style="background-color:gray;">
-                            <li class="nav-item"><a class="nav-link text-center" href="/">Home</a></li>
-                            <li class="nav-item"><a class="nav-link text-center"  href="/Ourtutors">Our Tutors</a></li>
-                            <li class="nav-item"><a class="nav-link text-center" href="/courses">Subjects</a></li>
-                            <li class="nav-item"><a class="nav-link text-center" href="/news">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link text-center"  href="/news">How It works</a></li>
-                            <li class="nav-item"><a class="nav-link text-center"  href="/contact">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link text-center" href="{{route('home')}}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-center"  href="{{route('ourTutors')}}">Our Tutors</a></li>
+                            <li class="nav-item"><a class="nav-link text-center" href="{{route('courses')}}">Subjects</a></li>
+                            <li class="nav-item"><a class="nav-link text-center" href="{{route('pricing')}}">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link text-center"  href="{{route('pricing')}}">How It works</a></li>
+                            <li class="nav-item"><a class="nav-link text-center"  href="{{route('contact')}}">Contact Us</a></li>
                             <li class="nav-item pb-1" style="background-color: green;"><a class="nav-link text-center" href="{{route('login')}}">Login/Register</a></li>
                 </ul>
-                
+
             </div>
 
         </div>

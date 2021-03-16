@@ -17,15 +17,25 @@ use Illuminate\Support\Facades\Route;
 //FrontPage Views
 Route::group(['namespace' => 'FrontPage'], function(){
 
-	Route::get('/','HomeController@home')->name('home');
+	Route::get('/',function(){
+        return view('frontPage.home');
+    })->name('home');
 
-	Route::get('/Ourtutors',function(){return view('frontpage/layouts/ourtutors');});
+	Route::get('/Ourtutors',function(){
+        return view('frontPage/layouts/ourtutors');
+    })->name('ourTutors');
 
-	Route::get('/courses', 'CoursesController@courses');
+	Route::get('/courses',function(){
+    	return view('frontPage.layouts.courses');
+    })->name('courses');
 
-	Route::get('/contact', 'ContactController@contact');
+	Route::get('/contact', function(){
+    	return view('frontPage.layouts.contact');
+    })->name('contact');
 
-	Route::get('/news', 'NewsController@news');
+	Route::get('/news', function(){
+    	return view('frontPage.layouts.news');
+    })->name('pricing');
 
 });
 
