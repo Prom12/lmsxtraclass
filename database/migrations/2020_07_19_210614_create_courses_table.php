@@ -17,7 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('title',256);
             $table->string('lecturer',256);
-            $table->integer('category_id');
+            $table->integer('categories_id');
             $table->integer('user_id');
             $table->integer('price');
             $table->text('description');
