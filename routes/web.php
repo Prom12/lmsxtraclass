@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Model\User\courses;
+use App\Model\User\categories;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'FrontPage'], function(){
 
 	Route::get('/',function(){
-        return view('frontPage.home');
+        $courses = courses::all();
+        return view('frontPage.home',compact('courses'));
     })->name('home');
 
 	Route::get('/Ourtutors',function(){
@@ -26,7 +29,9 @@ Route::group(['namespace' => 'FrontPage'], function(){
     })->name('ourTutors');
 
 	Route::get('/courses',function(){
-    	return view('frontPage.layouts.courses');
+        $courses = courses::all();
+        $categories = categories::all();
+    	return view('frontPage.layouts.courses',compact('courses','categories'));
     })->name('courses');
 
 	Route::get('/contact', function(){

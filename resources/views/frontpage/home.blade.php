@@ -16,15 +16,14 @@
         </h6>
     </div>
 </div>
-<div class="" style="height:80px; background-color:rgb(236, 236, 236); display:flex;flex-direction:row;justify-content:space-around;align-items:center;overflow:auto;color:white">
-    <div class="" style="padding:15px 15px; background-color:rgb(144, 79, 90)"><a style="color:white;" href="{{route('courses')}}">Math</a></div>
-    <div class="" style="padding:15px 15px; background-color:rgb(13, 107, 4)">English</div>
-    <div class="" style="padding:15px 15px; background-color:rgb(109, 7, 24)">Social</div>
-    <div class="" style="padding:15px 15px; background-color:rgb(2, 59, 145)">French</div>
-    <div class="" style="padding:15px 15px; background-color:rgb(26, 10, 13)">Economics</div>
-    <div class="" style="padding:15px 15px; background-color:rgb(66, 1, 37)">Twi</div>
 
+<div class="" style="height:auto; background-color:rgb(236, 236, 236); display:flex;flex-direction:row;justify-content:space-around;align-items:center;overflow:auto;color:white">
+    @foreach ($courses as $course)
+        <div class="" style="padding:15px 15px;margin:5px 0; background-color:rgb(144, 79, 90)"><a style="color:white;" href="{{route('courses')}}">{{$course->title}}</a></div>
+    @endforeach
 </div>
+
+
 <div class="" style="height:400px;display:grid;grid-template-columns:auto auto;">
     <div style="text-align:center;margin-top:50px;">
         <h3 style="margin-bottom:20px;">Affordable Pricing</h3>
