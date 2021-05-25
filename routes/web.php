@@ -20,8 +20,8 @@ use App\Model\User\categories;
 Route::group(['namespace' => 'FrontPage'], function(){
 
 	Route::get('/',function(){
-        //$courses = courses::all();
-    return view('frontPage.home'/*,compact('courses')*/);
+        $courses = courses::all();
+    return view('frontPage.home',compact('courses'));
     })->name('home');
 
 	Route::get('/Ourtutors',function(){
