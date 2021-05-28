@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,8 +9,8 @@ use App\Model\User\courses;
 use App\Model\User\categories;
 class LessonsController extends Controller
 {
-    
-    
+
+
     /**
      * Display a listing of the resource.
      *

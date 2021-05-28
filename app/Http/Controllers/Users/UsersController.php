@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use App\User;
 use App\Role;
 class UsersController extends Controller
 {
-   
+
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-      
+
         $roles = role::all();
         return view('users.content.users.users',compact('roles'));
     }
@@ -44,11 +44,11 @@ class UsersController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-             
+
         ]);
         $request['password'] = bcrypt($request->password);
         $users=User::create($request->all());
-        $users->roles()->sync($request->role); 
+        $users->roles()->sync($request->role);
         return redirect(route('users.users.create'));
     }
 
@@ -90,11 +90,11 @@ class UsersController extends Controller
         $this->validate($request,[
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            
-             
+
+
         ]);
         $request->status? : $request['status'] = 0;
-    
+
         $users=User::where('id',$id)->update($request->except('_token','_method','role'));
         User::find($id)->roles()->sync($request->role);
         return redirect(route('users.users.index'));

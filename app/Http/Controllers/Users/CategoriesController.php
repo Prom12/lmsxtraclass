@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\users;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -11,8 +11,8 @@ use App\Model\User\lessons;
 
 class CategoriesController extends Controller
 {
-     
-    
+
+
     /**
      * Display a listing of the resource.
      *
