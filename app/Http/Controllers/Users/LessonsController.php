@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\users;
+namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -20,7 +20,7 @@ class LessonsController extends Controller
     {
         $courses = courses::all();
         $lessons = lessons::all();
-        return $courses;
+        return view('users.content.lessons.show',compact('lessons','courses'));
     }
 
     /**
@@ -32,7 +32,7 @@ class LessonsController extends Controller
     {
         $categories =categories::all();
         $courses = courses::all();
-        return $courses;
+        return view('users.content.lessons.lessons',compact(['courses','categories']));
     }
 
     /**
@@ -84,7 +84,7 @@ class LessonsController extends Controller
         $categories = categories::all();
         $courses =  courses::all();
         $lessons = lessons::where('id',$id)->first();
-        return $lessons;
+        return view('users.content.lessons.edit',compact(['categories','courses','lessons']));
     }
 
     /**

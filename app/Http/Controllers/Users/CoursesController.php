@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\users;
+namespace App\Http\Controllers\Users;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -19,8 +19,8 @@ class CoursesController extends Controller
     public function index()
     {
         $category = categories::all();
-        $courses = courses::find("categories_id",$category);
-        return $courses;
+        $courses = courses::all();
+        return view('users.content.courses.show',compact('courses','category'));
     }
 
     /**
@@ -31,7 +31,7 @@ class CoursesController extends Controller
     public function create()
     {
         $categories = categories::all();
-        return $categories;
+        return view('users.content.courses.courses',compact('categories'));
     }
 
     /**
@@ -92,7 +92,7 @@ class CoursesController extends Controller
     {
         $categories = categories::all();
         $courses = courses::where('id',$id)->first();
-        return $courses;
+        return view('users.content.courses.edit',compact('courses','categories'));
     }
 
     /**

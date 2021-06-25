@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\users;
+namespace App\Http\Controllers\Users;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -21,7 +21,7 @@ class CategoriesController extends Controller
     public function index()
     {
          $categories = categories::all();
-        return $categories;
+        return view('users.content.categories.show',compact('categories'));
     }
 
     /**
@@ -32,7 +32,7 @@ class CategoriesController extends Controller
     public function create()
     {
 
-        return ;
+        return view('users.content.categories.categories');
     }
 
     /**
@@ -75,7 +75,7 @@ class CategoriesController extends Controller
     {
 
         $categories = categories::where('id',$id)->first();
-        return $categories;
+        return view('users.content.categories.edit',compact('categories'));
     }
 
     /**

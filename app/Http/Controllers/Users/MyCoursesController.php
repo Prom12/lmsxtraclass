@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\users;
+namespace App\Http\Controllers\Users;
 
 use App\Model\User\categories;
 use App\Model\User\courses;
@@ -16,7 +16,7 @@ class MyCoursesController extends Controller
      */
     public function index(){
     	$courses = courses::where('user_id',\Auth::id())->paginate(10);
-    	return $courses;
+    	return view('users.content.mycourses.show',compact('courses'));
     }
 
      /**
@@ -27,7 +27,7 @@ class MyCoursesController extends Controller
     public function create()
     {
 
-        return ;
+        return view('users.content.mycourses.detail');
     }
 
 }

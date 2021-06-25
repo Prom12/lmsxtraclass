@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\users;
+namespace App\Http\Controllers\Users;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -26,6 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return ;
+        return view('users.home');
     }
 }
