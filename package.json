@@ -20,9 +20,5 @@
     },
     "dependencies": {
         "@coreui/coreui": "^3.2.2"
-    },
-    "post-install-cmd": [
-        "php artisan clear-compiled",
-        "chmod -R 777 public/"
-    ]
+    }
 }
