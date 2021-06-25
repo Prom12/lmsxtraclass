@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\users;
 
 use App\Model\User\categories;
 use App\Model\User\courses;
