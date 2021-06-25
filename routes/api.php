@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Model\User\courses;
+use App\Model\User\categories;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/',function(){
+    return courses::all();
+});
+
+
+Route::get('/courses',function(){
+    return categories::all();
+})->name('courses');
