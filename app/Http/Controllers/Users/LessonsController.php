@@ -20,7 +20,7 @@ class LessonsController extends Controller
     {
         $courses = courses::all();
         $lessons = lessons::all();
-        return view('users.content.lessons.show',compact('lessons','courses'));
+        return $courses;
     }
 
     /**
@@ -32,7 +32,7 @@ class LessonsController extends Controller
     {
         $categories =categories::all();
         $courses = courses::all();
-        return view('users.content.lessons.lessons',compact(['courses','categories']));
+        return $courses;
     }
 
     /**
@@ -84,7 +84,7 @@ class LessonsController extends Controller
         $categories = categories::all();
         $courses =  courses::all();
         $lessons = lessons::where('id',$id)->first();
-        return view('users.content.lessons.edit',compact(['categories','courses','lessons']));
+        return $lessons;
     }
 
     /**

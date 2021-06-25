@@ -16,7 +16,7 @@ class MyCoursesController extends Controller
      */
     public function index(){
     	$courses = courses::where('user_id',\Auth::id())->paginate(10);
-    	return view('users.content.mycourses.show',compact('courses'));
+    	return $courses;
     }
 
      /**
@@ -27,7 +27,7 @@ class MyCoursesController extends Controller
     public function create()
     {
 
-        return view('users.content.mycourses.detail');
+        return ;
     }
 
 }

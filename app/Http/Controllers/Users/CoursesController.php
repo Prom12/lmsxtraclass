@@ -19,8 +19,8 @@ class CoursesController extends Controller
     public function index()
     {
         $category = categories::all();
-        $courses = courses::all();
-        return view('users.content.courses.show',compact('courses','category'));
+        $courses = courses::find("categories_id",$category);
+        return $courses;
     }
 
     /**
@@ -31,7 +31,7 @@ class CoursesController extends Controller
     public function create()
     {
         $categories = categories::all();
-        return view('users.content.courses.courses',compact('categories'));
+        return $categories;
     }
 
     /**
@@ -92,7 +92,7 @@ class CoursesController extends Controller
     {
         $categories = categories::all();
         $courses = courses::where('id',$id)->first();
-        return view('users.content.courses.edit',compact('courses','categories'));
+        return $courses;
     }
 
     /**

@@ -21,7 +21,7 @@ class CategoriesController extends Controller
     public function index()
     {
          $categories = categories::all();
-        return view('users.content.categories.show',compact('categories'));
+        return $categories;
     }
 
     /**
@@ -32,7 +32,7 @@ class CategoriesController extends Controller
     public function create()
     {
 
-        return view('users.content.categories.categories');
+        return ;
     }
 
     /**
@@ -75,7 +75,7 @@ class CategoriesController extends Controller
     {
 
         $categories = categories::where('id',$id)->first();
-        return view('users.content.categories.edit',compact('categories'));
+        return $categories;
     }
 
     /**
